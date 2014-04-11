@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Humanizer.Localisation;
+using Humanizer.DateTimeHumanizeStrategy;
+using Humanizer.Localisation.Formatters;
 
 namespace Humanizer.Configuration
 {
@@ -10,14 +11,15 @@ namespace Humanizer.Configuration
     /// </summary>
     public static class Configurator
     {
-        private static readonly IDictionary<string, Func<IFormatter>> FormatterFactories = 
+        private static readonly IDictionary<string, Func<IFormatter>> FormatterFactories =
             new Dictionary<string, Func<IFormatter>>(StringComparer.OrdinalIgnoreCase)
         {
             { "ro", () => new RomanianFormatter() },
             { "ru", () => new RussianFormatter() },
             { "ar", () => new ArabicFormatter() },
-            { "sk", () => new CzechSlovakFormatter() },
-            { "cs", () => new CzechSlovakFormatter() }
+            { "sk", () => new CzechSlovakPolishFormatter() },
+            { "cs", () => new CzechSlovakPolishFormatter() },
+            { "pl", () => new CzechSlovakPolishFormatter() }
         };
 
         /// <summary>
@@ -29,11 +31,12 @@ namespace Humanizer.Configuration
             {
                 Func<IFormatter> formatterFactory;
                 if (FormatterFactories.TryGetValue(CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, out formatterFactory))
-                {
                     return formatterFactory();
-                }
+                
                 return new DefaultFormatter();
             }
         }
+
+        public static IDateTimeHumanizeStrategy DateTimeHumanizeStrategy { get; set; }
     }
 }

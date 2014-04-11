@@ -78,7 +78,16 @@
     <Compile Include="DateHumanize.cs" />
     <Compile Include="Localisation\cs\DateHumanizeTests.cs" />
     <Compile Include="Localisation\cs\TimeSpanHumanizeTests.cs" />
+    <Compile Include="Localisation\da\DateHumanizeTests.cs" />
+    <Compile Include="Localisation\da\TimeSpanHumanizeTests.cs" />
+    <Compile Include="Localisation\fr-BE\DateHumanizeTests.cs" />
+    <Compile Include="Localisation\fr-BE\TimeSpanHumanizeTests.cs" />
+    <Compile Include="Localisation\fr\DateHumanizeTests.cs" />
+    <Compile Include="Localisation\fr\TimeSpanHumanizeTests.cs" />
     <Compile Include="Localisation\nb-NO\TimeSpanHumanizeTests.cs" />
+    <Compile Include="Localisation\pl\DateHumanizeTests.cs" />
+    <Compile Include="Localisation\pl\TimeSpanHumanizeTests.cs" />
+    <Compile Include="Localisation\ru-RU\TimeSpanHumanizeTests.cs" />
     <Compile Include="Localisation\sk\DateHumanizeTests.cs" />
     <Compile Include="Localisation\ar\DateHumanizeTests.cs" />
     <Compile Include="Localisation\ar\NumberToWordsTests.cs" />
@@ -98,6 +107,7 @@
     <Compile Include="Localisation\sk\TimeSpanHumanizeTests.cs" />
     <Compile Include="Localisation\sv\DateHumanizeTests.cs" />
     <Compile Include="Localisation\sv\TimeSpanHumanizeTests.cs" />
+    <Compile Include="DateTimeHumanizePrecisionStrategyTests.cs" />
     <Compile Include="ResourceKeyTests.cs" />
     <Compile Include="RomanNumeralTests.cs" />
     <Compile Include="StringExtensionsTests.cs" />
@@ -105,7 +115,7 @@
     <Compile Include="TransformersTests.cs" />
     <Compile Include="NumberToOrdinalWordsTests.cs" />
     <Compile Include="Localisation\ro-Ro\DateHumanizeTests.cs" />
-    <Compile Include="DateHumanizeTests.cs" />
+    <Compile Include="DateHumanizeDefaultStrategyTests.cs" />
     <Compile Include="DehumanizeToEnumTests.cs" />
     <Compile Include="EnumHumanizeTests.cs" />
     <Compile Include="EnumUnderTest.cs" />
